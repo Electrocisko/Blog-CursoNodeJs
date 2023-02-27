@@ -2,6 +2,8 @@ import conecction from "./database/connection.js";
 import express from 'express';
 import cors from 'cors';
 import articule_router from "./routes/Articule_Router.js";
+import dotenvConfig from './config/config.js'
+
 // Inicializa app
 
 // Conectar a Base de datos
@@ -9,7 +11,7 @@ conecction();
 
 //Crear servidor Node
 const app = express();
-const PORT = 8080;
+const PORT = dotenvConfig.PORT;
 
 // middelwars
 app.use(cors()); 

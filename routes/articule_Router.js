@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 const loader = multer({storage: storage})
 
 // Routes
-router.post('/crear', create);
+router.post('/create', create);
 router.get('/articules/:lasts?',all);
 router.get('/articule/:id',one);
 router.delete('/articule/:id', remove);
