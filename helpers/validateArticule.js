@@ -1,4 +1,5 @@
-import validator from "validator";
+//import validator from "validator";
+const validator = require('validator');
 
 const validateArticule = (params) => {
     let validate_titel =
@@ -10,4 +11,6 @@ const validateArticule = (params) => {
     }
   };
 
-  export default validateArticule;
+  //export default validateArticule;
+
+  module.exports = validateArticule;

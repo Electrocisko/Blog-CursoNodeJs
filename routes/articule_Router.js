@@ -1,7 +1,14 @@
-import express from 'express';
+// import express from 'express';
+// import { create, all, one, remove, update, upLoad, image, search } from '../controlers/articule_Controller.js';
+// import multer from 'multer';
+
+const express  = require('express');
+const multer = require('multer');
+const {create, all, one, remove, update, upLoad, image, search} = require('../controlers/articule_Controller.js')
+
+
+
 const router = express.Router();
-import { create, all, one, remove, update, upLoad, image, search } from '../controlers/articule_Controller.js';
-import multer from 'multer';
 
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
@@ -24,4 +31,6 @@ router.post('/subir-imagen/:id',[loader.single('file0')] ,upLoad);
 router.get('/imagen/:fichero', image);
 router.get('/buscar/:item', search);
 
-export default router;
+//export default router;
+
+module.exports = router;

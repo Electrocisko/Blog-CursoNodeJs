@@ -1,13 +1,19 @@
-import conecction from "./database/connection.js";
-import express from 'express';
-import cors from 'cors';
-import articule_router from "./routes/Articule_Router.js";
-import dotenvConfig from './config/config.js'
+// import conecction from "./database/connection.js";
+// import express from 'express';
+// import cors from 'cors';
+// import articule_router from "./routes/Articule_Router.js";
+// import dotenvConfig from './config/config.js'
+
+const express = require('express');
+const cors = require('cors');
+const connection = require("./database/connection.js");
+const articule_router = require("./routes/Articule_Router.js");
+const dotenvConfig = require('./config/config.js');
 
 // Inicializa app
 
 // Conectar a Base de datos
-conecction();
+connection();
 
 //Crear servidor Node
 const app = express();

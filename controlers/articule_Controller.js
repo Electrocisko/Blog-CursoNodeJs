@@ -1,7 +1,12 @@
-import validateArticule from "../helpers/validateArticule.js";
-import articulesService from "../models/Articule.js";
-import fs from 'fs';
-import path from "path";
+// import validateArticule from "../helpers/validateArticule.js";
+// import articulesService from "../models/Articule.js";
+// import fs from 'fs';
+// import path from "path";
+
+const validateArticule = require("../helpers/validateArticule.js");
+const articulesService = require("../models/Articule.js");
+const fs = require('fs');
+const path = require('path');
 
 const create = (req, res) => {
   // recoger los parametros
@@ -213,7 +218,9 @@ articulesService.find({ "$or": [
 }
 
 
-export { create, all, one, remove, update, upLoad, image, search};
+//export { create, all, one, remove, update, upLoad, image, search};
+
+module.exports = { create, all, one, remove, update, upLoad, image, search};
 
 
 

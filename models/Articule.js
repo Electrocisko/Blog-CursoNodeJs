@@ -1,4 +1,6 @@
-import {Schema, model} from "mongoose";
+//import {Schema, model} from "mongoose";
+
+const {Schema, model} = require('mongoose');
 
 const articuleSchema = Schema({
   titel: {
@@ -21,5 +23,6 @@ const articuleSchema = Schema({
 
  const articulesService = model('Articule',articuleSchema,"articules");
 
-export default articulesService;
+//export default articulesService;
 
+module.exports = articulesService;
